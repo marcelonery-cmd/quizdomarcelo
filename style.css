@@ -1,0 +1,273 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #050b2c, #102d69, #071638);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+.topo {
+    text-align: center;
+    padding: 30px 15px;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 3px solid #ffd700;
+}
+
+.topo h1 {
+    color: #ffd700;
+    font-size: clamp(26px, 5vw, 42px);
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.topo p {
+    color: #dbe6ff;
+}
+
+/* Área principal */
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.painel {
+    background: rgba(8, 20, 55, 0.96);
+    border: 2px solid #d6ae27;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.painel h2 {
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.painel p {
+    line-height: 1.6;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Campo de nome */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #526ca4;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    background: #ffffff;
+    color: #111827;
+    font-size: 16px;
+}
+
+/* Botões */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.12);
+}
+
+.btn:focus-visible,
+.alternativa:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.principal {
+    background: #ffd700;
+    color: #10204a;
+}
+
+.secundario {
+    background: #254b91;
+    color: #ffffff;
+    border: 1px solid #7297e4;
+}
+
+.destaque {
+    background: #8b42d8;
+    color: #ffffff;
+}
+
+.perigo {
+    background: #c93636;
+    color: #ffffff;
+}
+
+/* Informações da partida */
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* Barra de progresso */
+.barra-progresso {
+    height: 10px;
+    width: 100%;
+    margin-bottom: 28px;
+    overflow: hidden;
+    background: #26385f;
+    border-radius: 20px;
+}
+
+#progresso {
+    width: 0%;
+    height: 100%;
+    background: #ffd700;
+    transition: width 0.3s ease;
+}
+
+/* Perguntas e alternativas */
+#pergunta {
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.alternativas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.alternativa {
+    min-height: 65px;
+    padding: 15px;
+    text-align: left;
+    color: #ffffff;
+    background: #183b79;
+    border: 2px solid #456db2;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.alternativa:hover:not(:disabled) {
+    background: #2856a0;
+}
+
+.alternativa:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+.alternativa.correta {
+    background: #176b3a;
+    border-color: #4de58a;
+}
+
+.alternativa.errada {
+    background: #8d2929;
+    border-color: #ff6868;
+}
+
+/* Mensagens e ações */
+#mensagem {
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.acoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.acoes .btn {
+    margin-top: 0;
+    padding: 12px 8px;
+}
+
+#resultado-premio {
+    color: #ffd700;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Ranking */
+#lista-ranking {
+    padding-left: 28px;
+    margin-bottom: 22px;
+}
+
+#lista-ranking li {
+    padding: 12px 8px;
+    border-bottom: 1px solid #354a77;
+    line-height: 1.5;
+}
+
+/* Utilitário */
+.escondido {
+    display: none !important;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #b7c8ec;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .painel {
+        padding: 20px 15px;
+    }
+
+    .alternativas {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        grid-template-columns: 1fr;
+    }
+
+    .informacoes {
+        flex-direction: column;
+    }
+}

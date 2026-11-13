@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show do Milhão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <h1>🏆 SHOW DO MILHÃO</h1>
+        <p>Responda corretamente e conquiste o prêmio!</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Tela inicial -->
+        <section id="tela-inicial" class="painel">
+            <h2>Bem-vindo ao Show do Milhão!</h2>
+            <p>Você está preparado para testar seus conhecimentos?</p>
+
+            <label for="nome-jogador">Digite seu nome:</label>
+            <input
+                type="text"
+                id="nome-jogador"
+                placeholder="Seu nome"
+                maxlength="30"
+            >
+
+            <button id="btn-iniciar" class="btn principal">
+                Começar o jogo
+            </button>
+
+            <button id="btn-ranking-inicial" class="btn secundario">
+                Ver ranking
+            </button>
+        </section>
+
+        <!-- Tela do jogo -->
+        <section id="tela-jogo" class="painel escondido">
+
+            <div class="informacoes">
+                <span id="numero-pergunta">Pergunta 1 de 20</span>
+                <span id="pontuacao">Prêmio: R$ 0</span>
+            </div>
+
+            <div class="barra-progresso">
+                <div id="progresso"></div>
+            </div>
+
+            <h2 id="pergunta">A pergunta aparecerá aqui.</h2>
+
+            <div id="alternativas" class="alternativas">
+                <!-- Alternativas criadas pelo JavaScript -->
+            </div>
+
+            <p id="mensagem" aria-live="polite"></p>
+
+            <div class="acoes">
+                <button id="btn-pular" class="btn secundario">
+                    ⏭ Pular pergunta
+                </button>
+
+                <button id="btn-dobro" class="btn destaque">
+                    🎲 Dobro ou nada
+                </button>
+
+                <button id="btn-desistir" class="btn perigo">
+                    🚪 Desistir
+                </button>
+            </div>
+
+            <button id="btn-continuar" class="btn principal escondido">
+                Próxima pergunta
+            </button>
+
+        </section>
+
+        <!-- Tela final -->
+        <section id="tela-final" class="painel escondido">
+            <h2 id="resultado-titulo">Fim de jogo!</h2>
+            <p id="resultado-texto"></p>
+            <p id="resultado-premio"></p>
+
+            <button id="btn-jogar-novamente" class="btn principal">
+                Jogar novamente
+            </button>
+
+            <button id="btn-ranking-final" class="btn secundario">
+                Ver ranking
+            </button>
+
+            <button id="btn-voltar-inicio" class="btn secundario">
+                Voltar ao início
+            </button>
+        </section>
+
+        <!-- Tela de ranking -->
+        <section id="tela-ranking" class="painel escondido">
+            <h2>🏆 Ranking dos jogadores</h2>
+
+            <ol id="lista-ranking">
+                <li>Nenhum resultado registrado ainda.</li>
+            </ol>
+
+            <button id="btn-limpar-ranking" class="btn perigo">
+                Limpar ranking
+            </button>
+
+            <button id="btn-voltar-ranking" class="btn principal">
+                Voltar
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Show do Milhão — Teste seus conhecimentos!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
